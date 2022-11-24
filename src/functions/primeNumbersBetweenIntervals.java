@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class primeNumbersBetweenIntervals {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int low = scan.nextInt();
-        int high = scan.nextInt();
-        checkPrimeNumbers(low,high);
+        try (Scanner scan = new Scanner(System.in)) {
+            int low = scan.nextInt();
+            int high = scan.nextInt();
+            checkPrimeNumbers(low,high);
+        }
     }
     public static void checkPrimeNumbers(int l, int h){
         while(l<h){
